@@ -4,12 +4,23 @@ class Api::V1::QuizzesController < ApplicationController
     render json: @quizzes
   end
 
+
+
   def create
     @quiz = Quiz.new(quiz_params)
     if @quiz.save
       render json: @quiz, status: :accepted
     else
       render json: { errors: @quiz.errors.full_messages }, status: :unprocessible_entity 
+    end
+  end
+
+  def show
+    @quiz = find_quiz
+    if @quiz
+      render json: @quiz, status: :accepted
+    else
+      render json: { errors: @quiz.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
@@ -20,6 +31,13 @@ class Api::V1::QuizzesController < ApplicationController
     else
       render json: { errors: @quiz.errors.full_messages }, status: :unprocessible_entity
     end
+  end
+
+  def destroy
+    @quiz=find_quiz
+    @quiz.destroy
+    render json: @quiz, status: :accepted
+
   end
 
   private

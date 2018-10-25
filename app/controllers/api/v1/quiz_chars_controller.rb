@@ -22,6 +22,12 @@ class Api::V1::QuizCharsController < ApplicationController
     end
   end
 
+  def destroy
+    @quiz_char = find_quiz_char
+    @quiz_char.destroy
+    render json: @quiz_char, status: :accepted
+  end
+
   private
 
   def quiz_char_params
