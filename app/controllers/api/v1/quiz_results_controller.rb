@@ -17,7 +17,7 @@ class Api::V1::QuizResultsController < ApplicationController
   private
 
   def quiz_result_params
-    params.permit(:quiz_char_id,:pass,:user_id,:quiz_id)
+    params.permit(:character_id,:user_id,:pass)
   end
 
   def find_quiz_result

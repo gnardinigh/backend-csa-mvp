@@ -4,6 +4,10 @@ class Api::V1::CharactersController < ApplicationController
     render json: @characters
   end
 
+  def show
+    @character=find_character
+  end
+
   def create
     @character = Character.new(character_params)
     if @character.save
