@@ -7,8 +7,8 @@ class UserSerializer < ActiveModel::Serializer
     self.object.quiz_results.map do |qr|
       {
         id:qr.id,
-        character_id:qr.character_id,
-        user_id:qr.user_id,
+        characterId:qr.character_id,
+        userId:qr.user_id,
         pass:qr.pass,
       }
     end
@@ -28,7 +28,7 @@ class UserSerializer < ActiveModel::Serializer
       {
         quizId:quiz.id,
         title:quiz.title,
-        user_id:quiz.user_id,
+        userId:quiz.user_id,
         quizChars:qcs
       }
     end
