@@ -59,8 +59,18 @@ The Hanzi Writer data comes from the Make Me A Hanzi project, which extracted th
   font library. However, in my opinion a huge amount of credit goes to [chandind](https://github.com/chanind), who combined these technologies with his own
   original ideas to create the SVG animations and on-screen quizzes.
 
+## Screen Caps
 
-
+### Browse your lists, select a list to display in large format
+![browse](./readmeimgs/xz1.png)
+### Create a new list
+![create](./readmeimgs/xz2.png)
+### Quiz reveal feature
+![reveal](./readmeimgs/xz3.png)
+### Quiz write feature
+![write](./readmeimgs/xz4.png)
+### Quiz quiz feature
+![quiz](./readmeimgs/xz5.png)
 
 
 
