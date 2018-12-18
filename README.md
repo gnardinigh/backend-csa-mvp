@@ -1,3 +1,6 @@
+# [Video Demo](https://www.youtube.com/watch?v=bw7IBNXy3PM)
+
+
 # XieZi
 
 XieZi is a personal study tool that teaches students of Mandarin Chinese how to write characters.
@@ -22,16 +25,27 @@ and the user can proceed to the next stroke, repeating until the character is wr
 
 ## Getting Started
 
-Fork and clone back-end and front-end repositories. 
+The github version of XieZi comes pre-populated with character lists to quickly demonstrate the app.
 
-Backend:
+While the 'list creator' screen is fully functional, you will not be able to actually save new lists in the demo.
 
-bundle install
-rails s
+Make sure to start the backend server first ( `rails s` ), then start the frontend with `yarn run start`. 
+You will need [Postgres](https://www.postgresql.org/) up and running to run the backend.
 
-Frontend:
+Enjoy!
 
-npm install && npm start
+### Backend:
+
+`bundle install` => `rake db:create` => `rake db:seed` => `rails s`
+
+#### note: only run `rake db:seed` once! If you accidentally run it more than once, use the following command sequence:
+`rake db:reset` => `rake db:create` => `rake db:seed` => `rails s`
+
+### Frontend:
+
+`npm install && npm start`
+
+
 
 ## Built With
 
